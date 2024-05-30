@@ -13,7 +13,6 @@ const app = express();
 dotenv.config();
 
 const MONGO_URI = process.env.MONGO_URI;
-const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
@@ -25,8 +24,8 @@ app.use("/api/birds", BirdRouter);
 app.use(express.static(path.join(__dirname + "public")));
 
 app.use(express.static("uploads"));
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(3001, () => {
+  console.log(`Server is running on port 3001`);
 });
 
 mongoose
